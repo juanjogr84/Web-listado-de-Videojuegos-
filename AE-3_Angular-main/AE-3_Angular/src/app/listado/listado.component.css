@@ -1,0 +1,44 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 33%;
+    margin-right: 33%;
+    height: 750px;
+}
+
+h1{
+    color: #440E27;
+    text-align: center;
+}
+
+h3{
+    color: #97324B;
+}
+
+
+
+table, th{
+    border: 2px solid #440E27;
+    text-align: center;
+    color: #440E27;
+    font-size: 18px;
+    padding: 8px;
+}
+
+td{
+    border-right: 1px solid #440E27;
+    border-bottom: 1px solid #440E27;
+    padding:10px;
+    color: #BB5263;
+}
+
+td:first-child{
+    border-left: 1px solid #440E27;
+}
+
+
+button{
+    border: 1px solid #440E27;
+    background-color: #BB5263;
+    color: white;
+    font-size: 14px;
+}

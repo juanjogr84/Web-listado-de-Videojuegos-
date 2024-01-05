@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listado videojuegos</title>
+        <link rel="stylesheet" href="listado.component.css">
+    </head>
+    <body>
+        <app-navegacion></app-navegacion>
+        <h1>Bienvenido {{user}} </h1> 
+        <button (click)="cerrarSesion()">Cerrar sesión</button>
+        <h3>Listado de videojuegos activos:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Valoración</th>
+                    <th>Ver detalle</th>
+                </tr>
+            </thead>
+            <tbody id="listado">
+                <tr *ngFor="let j of listadoJuegos">
+                    <td>{{ j.id }}</td>
+                    <td>{{ j.titulo }}</td>
+                    <td>{{ j.valoracion }}</td>
+                    <td>
+                        <button type="button"
+                            [routerLink]="[ '/detalle']"
+                            [queryParams]="{user: user, id : j.id, titulo : j.titulo, valoracion : j.valoracion, company : j.company, img : j.img}">Ver
+                            detalle
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>

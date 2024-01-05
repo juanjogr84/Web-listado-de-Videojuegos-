@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles</title>
+    <link rel="stylesheet" href="detalle.component.css">
+</head>
+<body>
+    <h3>Detalles del juego seleccionado</h3>
+<div>
+<table>    
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Compañía</th>
+            <th>Valoración</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td>{{ id }}</td>
+            <td>{{ titulo }}</td>
+            <td>{{ company }}</td>
+            <td>{{ valoracion }}</td>
+        </tr>
+    </tbody>
+</table> 
+<img src="{{ img }}">
+</div>
+<button (click)="irHome(user)">Volver home</button>
+</body>
+</html>

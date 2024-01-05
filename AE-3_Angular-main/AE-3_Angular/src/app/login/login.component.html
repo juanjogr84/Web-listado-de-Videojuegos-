@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.component.css">
+    </head>
+    <body>
+        <app-navegacion [user]="user"></app-navegacion>
+        <h1>Te damos la bienvenida a GameStore</h1>
+        <section>
+            <p>Por favor, introduce tu usuario y contraseña</p>
+            <div>
+                <label for="user">Introduce tu usuario :</label><br>
+                <input type="text" [(ngModel)]="user" placeholder="Usuario..."/>
+                <br><br>
+                <label for="pass">Introduce tu contraseña :</label>
+                <input type="password" [(ngModel)]="pass" placeholder="Contraseña..."/>
+                <br/>
+                <input id="boton" type="submit" (click)="validarForm()"/>
+            </div>
+            <p *ngIf="mensajeErrorOculto">Usuario o contraseña incorrectos, por
+                favor vuelve a intentarlo.</p>
+        </section>
+
+    </body>
+</html>
